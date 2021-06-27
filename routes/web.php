@@ -13,12 +13,13 @@ use App\Http\Controllers\ProductController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/product/create', [ProductController::class, 'store'])->name('product.store');
 Route::get('/product', [ProductController::class, 'index'])->name('product.index');
 Route::get('/product/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
 Route::post('/product/{id}/update', [ProductController::class, 'update'])->name('product.update');
 Route::delete('/product/{id}/delete', [ProductController::class, 'destroy'])->name('product.delete');
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -72,7 +72,11 @@ $( document ).ready(function() {
             });
 
         } else {
-
+            Swal.fire(
+                'Error!',
+                'Please fill in all fields!',
+                'Validation error'
+            )
         }
     });
 });

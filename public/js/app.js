@@ -65,7 +65,9 @@ $(document).ready(function () {
           }, 3000);
         }
       });
-    } else {}
+    } else {
+      Swal.fire('Error!', 'Please fill in all fields!', 'Validation error');
+    }
   });
 });
 

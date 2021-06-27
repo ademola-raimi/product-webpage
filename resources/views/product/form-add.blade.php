@@ -14,29 +14,15 @@
                     <div class="form-group">
                         <label for="product-name">Product Name</label>
                         <input type="text"  @error('product_name') is-invalid @enderror" name="product_name"  value="{{ old('product_name') }}" class="form-control" id="product_name" placeholder="name">
-                        @error('product_name')
-                        <span class="invalid" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="quantity">Quantity in Stock</label>
                         <input type="text" @error('quantity') is-invalid @enderror" name="quantity" class="form-control" id="quantity" value="{{ old('quantity') }}" placeholder="quantity">
-                        @error('quantity')
-                        <span class="invalid" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="price">Price per item</label>
                         <input type="number" @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}"  class="form-control" id="price" placeholder="price">
-                        @error('price')
-                        <span class="invalid" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
+
                     </div>
 
                 <button type="submit" id="submit" value="value" class="btn btn-primary" id="add-product">
